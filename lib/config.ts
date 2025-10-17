@@ -7,8 +7,8 @@ export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
-    label: "Jakie są nagrody w konkursie?",
-    prompt: "Jakie są nagrody w konkursie?",
+    label: "Pokaż przydatne linki",
+    prompt: "Pokaż przydatne linki",
     icon: "circle-question",
   },
 ];
