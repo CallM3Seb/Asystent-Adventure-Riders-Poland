@@ -7,14 +7,14 @@
 }
 
 /* Keep theme light even if someone adds a data-color-scheme="dark" attribute */
-:root[data-color-scheme="dark"] {
+:root[data-color-scheme="light"] {
   --background: #ffffff;
   --foreground: #000000;
   color-scheme: light;
 }
 
 /* Ignore OS dark preference and keep light theme */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root:not([data-color-scheme]) {
     --background: #ffffff;
     --foreground: #000000;
