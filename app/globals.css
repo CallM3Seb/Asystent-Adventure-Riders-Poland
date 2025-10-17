@@ -2,21 +2,23 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #FFFFFF;
+  --foreground: #000000; /* letters black */
   color-scheme: light;
 }
 
+/* Keep theme light even if someone adds a data-color-scheme="dark" attribute */
 :root[data-color-scheme="dark"] {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #ffffff;
+  --foreground: #000000;
   color-scheme: light;
 }
 
+/* Ignore OS dark preference and keep light theme */
 @media (prefers-color-scheme: dark) {
   :root:not([data-color-scheme]) {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    color-scheme: dark;
+    --background: #ffffff;
+    --foreground: #000000;
+    color-scheme: light;
   }
 }
 
