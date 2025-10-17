@@ -1,36 +1,46 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #000000; /* letters black */
-  color-scheme: light;
+/* Apply and lock the light scheme on :root and html */
+:root, html {
+  --background: #ffffff !important;
+  --foreground: #000000 !important;
+  color-scheme: light !important;
 }
 
-/* Keep theme light even if someone adds a data-color-scheme="dark" attribute */
-:root[data-color-scheme="light"] {
-  --background: #ffffff;
-  --foreground: #000000;
-  color-scheme: light;
+/* Ensure any "dark" attribute still gets the light values */
+:root[data-color-scheme="dark"],
+:root[data-theme="dark"] {
+  --background: #ffffff !important;
+  --foreground: #000000 !important;
+  color-scheme: light !important;
 }
 
-/* Ignore OS dark preference and keep light theme */
-@media (prefers-color-scheme: light) {
+/* Ignore OS dark preference */
+@media (prefers-color-scheme: dark) {
   :root:not([data-color-scheme]) {
-    --background: #ffffff;
-    --foreground: #000000;
-    color-scheme: light;
+    --background: #ffffff !important;
+    --foreground: #000000 !important;
+    color-scheme: light !important;
   }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: Arial, Helvetica, sans-serif;
-  --font-mono: SFMono-Regular, Consolas, "Liberation Mono", monospace;
+/* Global enforcement so elements, form controls and pseudo-elements use the same colors */
+*,
+*::before,
+*::after {
+  color: var(--foreground) !important;
+  -webkit-text-fill-color: var(--foreground) !important; /* helps with some browsers */
+  background-color: transparent !important;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
+html, body {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Make UI elements follow the same color */
+a, button, input, textarea, select, label {
+  color: var(--foreground) !important;
+  background-color: transparent !important;
 }
