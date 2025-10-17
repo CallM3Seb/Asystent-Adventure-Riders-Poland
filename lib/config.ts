@@ -8,7 +8,7 @@ export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
     label: "Pokaż przydatne linki",
-    prompt: "Pokaż przydatne linki",
+    prompt: "pokaż listę przydatnych linków",
     icon: "circle-question",
   },
 ];
