@@ -13,7 +13,7 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
   },
 ];
 
-export const PLACEHOLDER_INPUT = "Zadaj pytanie";
+export const PLACEHOLDER_INPUT = "Do kiedy można zgłosić się do konkursu?";
 
 export const GREETING = "Cześć, zadaj pytanie na temat Adventure Riders";
 
