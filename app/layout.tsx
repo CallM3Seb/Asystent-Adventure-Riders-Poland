@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AgentKit demo",
-  description: "Demo of ChatKit with hosted workflow",
+  title: "Asysten Adventure Riders Polans",
+  description: "Pomocny, mam nadzieję, asysten który odppwie na Twoje pytania o Adventure Riders Poland",
 };
 
 export default function RootLayout({
